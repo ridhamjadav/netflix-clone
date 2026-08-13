@@ -1,0 +1,75 @@
+.footer {
+
+    padding:
+        60px 0;
+
+    background: #000;
+
+    color: #aaa;
+
+}
+
+
+.footer > .container > p {
+
+    margin-bottom: 30px;
+
+}
+
+
+.footer-links {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.footer-links a {
+
+    display: block;
+
+    color: #aaa;
+
+    text-decoration: underline;
+
+    margin-bottom: 15px;
+
+    font-size: 14px;
+
+}
+
+
+.footer-links a:hover {
+
+    color: white;
+
+}
+
+
+.footer select {
+
+    margin-top: 25px;
+
+    padding:
+        10px 25px;
+
+    background: #000;
+
+    color: white;
+
+    border:
+        1px solid #777;
+
+}
+
+
+.footer-brand {
+
+    margin-top: 25px;
+
+}

@@ -1,0 +1,163 @@
+.hero {
+
+    position: relative;
+
+    min-height: 720px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        url("../assets/images/backgrounds/hero.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.7),
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.85)
+        );
+
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        900px,
+        calc(100% - 40px)
+    );
+
+    margin-top: 80px;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(
+            40px,
+            6vw,
+            68px
+        );
+
+    line-height: 1.05;
+
+    font-weight: 900;
+
+}
+
+
+.hero h2 {
+
+    font-size: 24px;
+
+    margin:
+        25px 0 15px;
+
+}
+
+
+.hero p {
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.email-form {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+}
+
+
+.email-form input {
+
+    width: 380px;
+
+    height: 58px;
+
+    padding:
+        0 18px;
+
+    border:
+        1px solid #888;
+
+    border-radius: 4px;
+
+    background:
+        rgba(20,20,20,.8);
+
+    color: white;
+
+    outline: none;
+
+}
+
+
+.get-started {
+
+    height: 58px;
+
+    padding:
+        0 25px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+}
+
+
+.get-started:hover {
+
+    background: #f6121d;
+
+}
+
+
+.get-started span {
+
+    font-size: 28px;
+
+    vertical-align: -2px;
+
+}

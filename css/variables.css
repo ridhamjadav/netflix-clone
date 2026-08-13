@@ -1,0 +1,21 @@
+:root {
+
+    --netflix-red: #e50914;
+
+    --netflix-red-dark: #b20710;
+
+    --black: #000000;
+
+    --dark: #141414;
+
+    --dark-card: #181818;
+
+    --gray: #808080;
+
+    --light-gray: #b3b3b3;
+
+    --white: #ffffff;
+
+    --transition: 0.3s ease;
+
+}

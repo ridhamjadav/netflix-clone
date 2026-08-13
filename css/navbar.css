@@ -1,0 +1,331 @@
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    z-index: 1000;
+
+    background: transparent;
+}
+
+.navbar-container {
+    width: min(
+        calc(100% - 70px),
+        1400px
+    );
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   NETFLIX LOGO
+========================================= */
+
+.netflix-logo {
+    display: inline-block;
+
+    color: #e50914;
+
+    font-size: 38px;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.navbar-right {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    height: 100%;
+}
+
+
+/* =========================================
+   LANGUAGE
+========================================= */
+
+.language-wrapper {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 40px;
+}
+
+.language-icon {
+    position: absolute;
+
+    left: 11px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 2;
+
+    font-size: 15px;
+
+    pointer-events: none;
+}
+
+.language-selector {
+    appearance: none;
+
+    height: 38px;
+
+    min-width: 125px;
+
+    padding: 0 30px 0 34px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 4px;
+
+    outline: none;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    color: white;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.language-selector option {
+    background: #000;
+
+    color: white;
+}
+
+
+/* =========================================
+   THEME BUTTON
+========================================= */
+
+.theme-button {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    background: rgba(0, 0, 0, 0.65);
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.theme-button:hover {
+    transform: scale(1.08);
+
+    background: rgba(40, 40, 40, 0.9);
+}
+
+
+/* =========================================
+   SIGN IN
+========================================= */
+
+.btn-signin,
+.sign-in-button {
+    height: 38px;
+
+    padding: 0 18px;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #e50914;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-signin:hover,
+.sign-in-button:hover {
+    background: #b20710;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.profile-container {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.profile-button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #333;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   PROFILE MENU
+========================================= */
+
+.profile-menu {
+    position: fixed;
+
+    top: 75px;
+
+    right: 35px;
+
+    width: 270px;
+
+    padding: 20px;
+
+    z-index: 4500;
+
+    background: #181818;
+
+    border: 1px solid #444;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.5);
+
+    display: none;
+}
+
+.profile-menu.active {
+    display: block;
+}
+
+
+/* =========================================
+   RESPONSIVE NAVBAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        height: 75px;
+    }
+
+    .navbar-container {
+        width: calc(100% - 30px);
+    }
+
+    .netflix-logo {
+        font-size: 28px;
+    }
+
+    .navbar-right {
+        gap: 7px;
+    }
+
+    .language-wrapper {
+        display: none;
+    }
+
+    .theme-button {
+        width: 34px;
+        height: 34px;
+    }
+
+    .btn-signin,
+    .sign-in-button {
+        height: 34px;
+
+        padding: 0 12px;
+
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .netflix-logo {
+        font-size: 24px;
+    }
+
+    .theme-button {
+        display: none;
+    }
+
+    .btn-signin,
+    .sign-in-button {
+        padding: 0 10px;
+    }
+}
