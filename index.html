@@ -1,1 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Netflix inspired streaming website"
+    >
+
+    <title>Netflix Clone</title>
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/main.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/hero.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/trending.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/faq.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/footer.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     NAVBAR
+===================================== -->
+
+<header class="navbar">
+
+    <div class="navbar-container">
+
+        <!-- LEFT -->
+        <a href="#" class="netflix-logo">
+            NETFLIX
+        </a>
+
+
+        <!-- RIGHT -->
+        <div class="navbar-right">
+
+            <!-- LANGUAGE -->
+            <div class="language-wrapper">
+
+                <span class="language-icon">
+                    🌐
+                </span>
+
+                <select
+                    id="languageSelector"
+                    class="language-selector"
+                >
+                    <option value="en">
+                        English
+                    </option>
+
+                    <option value="hi">
+                        हिन्दी
+                    </option>
+                </select>
+
+            </div>
+
+
+            <!-- THEME -->
+            <button
+                id="themeButton"
+                class="theme-button"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                ☀️
+            </button>
+
+
+            <!-- SIGN IN -->
+            <button
+                id="signInButton"
+                class="btn-signin"
+                type="button"
+            >
+                Sign In
+            </button>
+
+
+            <!-- PROFILE -->
+            <div
+                id="profileContainer"
+                class="profile-container hidden"
+            >
+
+                <button
+                    id="profileButton"
+                    class="profile-button"
+                    type="button"
+                >
+                    👤
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<main>
+
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="hero-content">
+
+        <h1 id="heroTitle">
+
+            Unlimited movies,
+            <br>
+            shows, and more
+
+        </h1>
+
+
+        <h2 id="heroSubtitle">
+
+            Starts at ₹149.
+            Cancel at any time.
+
+        </h2>
+
+
+        <p>
+
+            Ready to watch?
+            Enter your email to create
+            or restart your membership.
+
+        </p>
+
+
+        <form
+            class="email-form"
+            id="heroEmailForm"
+        >
+
+            <input
+                type="email"
+                id="heroEmail"
+                placeholder="Email address"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="get-started"
+            >
+
+                Get Started
+
+                <span>
+                    ›
+                </span>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     TRENDING
+===================================== -->
+
+<section class="section trending">
+
+    <div class="container">
+
+        <h2>
+            Trending Now
+        </h2>
+
+
+        <div class="slider-container">
+
+
+            <button
+                id="sliderLeft"
+                class="slider-button left"
+                type="button"
+            >
+                ‹
+            </button>
+
+
+            <div
+                id="movieList"
+                class="movie-list"
+            ></div>
+
+
+            <button
+                id="sliderRight"
+                class="slider-button right"
+                type="button"
+            >
+                ›
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CONTINUE WATCHING
+===================================== -->
+
+<section
+    class="section continue-section"
+    id="continueSection"
+>
+
+    <div class="container">
+
+        <h2>
+            Continue Watching
+        </h2>
+
+
+        <div
+            id="continueList"
+            class="movie-list"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     MY LIST
+===================================== -->
+
+<section
+    class="section my-list-section"
+    id="myListSection"
+>
+
+    <div class="container">
+
+        <h2>
+            My List
+        </h2>
+
+
+        <div
+            id="myList"
+            class="movie-list"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     SEARCH
+===================================== -->
+
+<section class="search-section">
+
+    <div class="container">
+
+        <h2>
+            Search Movies & Shows
+        </h2>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for movies, shows or genres..."
+            >
+
+            <button
+                id="searchButton"
+                type="button"
+            >
+                Search
+            </button>
+
+        </div>
+
+
+        <div
+            id="searchResults"
+            class="movie-list"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     FAQ
+===================================== -->
+
+<section class="section faq">
+
+    <div class="container">
+
+        <h2>
+            Frequently Asked Questions
+        </h2>
+
+
+        <div
+            id="faqList"
+            class="faq-list"
+        ></div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     CTA
+===================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Ready to watch?
+        </h2>
+
+
+        <p>
+            Enter your email to create
+            or restart your membership.
+        </p>
+
+
+        <form
+            class="email-form"
+            id="ctaEmailForm"
+        >
+
+            <input
+                type="email"
+                id="ctaEmail"
+                placeholder="Email address"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="get-started"
+            >
+
+                Get Started
+
+                <span>
+                    ›
+                </span>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================
+     MOVIE MODAL
+===================================== -->
+
+<div
+    id="movieModal"
+    class="movie-modal"
+>
+
+</div>
+
+
+
+<!-- =====================================
+     AUTH MODAL
+===================================== -->
+
+<div
+    id="authModal"
+    class="auth-modal"
+>
+
+    <div class="auth-box">
+
+
+        <button
+            id="authClose"
+            class="auth-close"
+            type="button"
+        >
+            ×
+        </button>
+
+
+
+        <!-- LOGIN -->
+
+        <div
+            id="loginForm"
+            class="auth-form"
+        >
+
+            <h1>
+                Sign In
+            </h1>
+
+
+            <p class="auth-subtitle">
+
+                Sign in to continue watching.
+
+            </p>
+
+
+            <form
+                id="loginFormElement"
+            >
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="Email address"
+                    required
+                >
+
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Password"
+                    required
+                >
+
+
+                <div
+                    id="loginError"
+                    class="auth-error"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                >
+                    Sign In
+                </button>
+
+
+                <div class="auth-options">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        Remember me
+
+                    </label>
+
+
+                    <button
+                        type="button"
+                        id="forgotPassword"
+                    >
+                        Forgot password?
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <p class="auth-switch">
+
+                New to Netflix?
+
+                <button
+                    id="showSignup"
+                    type="button"
+                >
+                    Sign up now.
+                </button>
+
+            </p>
+
+        </div>
+
+
+
+        <!-- SIGN UP -->
+
+        <div
+            id="signupForm"
+            class="auth-form hidden"
+        >
+
+            <h1>
+                Create Account
+            </h1>
+
+
+            <p class="auth-subtitle">
+
+                Create your account
+                to get started.
+
+            </p>
+
+
+            <form
+                id="signupFormElement"
+            >
+
+                <input
+                    type="text"
+                    id="signupName"
+                    placeholder="Full name"
+                    required
+                >
+
+
+                <input
+                    type="email"
+                    id="signupEmail"
+                    placeholder="Email address"
+                    required
+                >
+
+
+                <input
+                    type="password"
+                    id="signupPassword"
+                    placeholder="Password"
+                    minlength="6"
+                    required
+                >
+
+
+                <input
+                    type="password"
+                    id="signupConfirmPassword"
+                    placeholder="Confirm password"
+                    minlength="6"
+                    required
+                >
+
+
+                <div
+                    id="signupError"
+                    class="auth-error"
+                ></div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                >
+                    Create Account
+                </button>
+
+            </form>
+
+
+            <p class="auth-switch">
+
+                Already have an account?
+
+                <button
+                    id="showLogin"
+                    type="button"
+                >
+                    Sign in.
+                </button>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================
+     PROFILE MENU
+===================================== -->
+
+<div
+    id="profileMenu"
+    class="profile-menu"
+>
+
+    <div class="profile-header">
+
+        <div class="profile-avatar">
+            👤
+        </div>
+
+
+        <div>
+
+            <strong id="profileName">
+                User
+            </strong>
+
+            <small id="profileEmail">
+                user@email.com
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+
+    <button
+        id="profileMyList"
+        type="button"
+    >
+        My List
+    </button>
+
+
+    <button
+        id="profileContinue"
+        type="button"
+    >
+        Continue Watching
+    </button>
+
+
+    <button
+        id="logoutButton"
+        type="button"
+        class="logout-button"
+    >
+        Sign Out
+    </button>
+
+</div>
+
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <p>
+            Questions? Call 000-800-919-1743
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                FAQ
+            </a>
+
+            <a href="#">
+                Help Centre
+            </a>
+
+            <a href="#">
+                Account
+            </a>
+
+            <a href="#">
+                Media Centre
+            </a>
+
+            <a href="#">
+                Investor Relations
+            </a>
+
+            <a href="#">
+                Jobs
+            </a>
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms of Use
+            </a>
+
+        </div>
+
+
+        <select>
+
+            <option>
+                English
+            </option>
+
+            <option>
+                हिन्दी
+            </option>
+
+        </select>
+
+
+        <p class="footer-brand">
+            Netflix Clone
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script
+    type="module"
+    src="js/main.js"
+></script>
+
+
+</body>
+
+</html>
